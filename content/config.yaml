@@ -1,0 +1,57 @@
+site:
+  name: Business Name
+  organization: 'Business Name LTD'
+  site: 'https://example.com'
+  announcement: ''
+
+  base: '/'
+  trailingSlash: false
+
+  googleSiteVerificationId: xxx
+
+# Default SEO metadata
+metadata:
+  title:
+    default: Business Name
+    template: '%s — Business Name'
+  description: "Business Description"
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Business Name
+    images:
+      - url: '/images/default.png'
+        width: 1200
+        height: 628
+    type: website
+  twitter:
+    handle: '@businessname'
+    site: '@businessname'
+    cardType: summary_large_image
+
+i18n:
+  language: en
+  textDirection: ltr
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: 'G-XXXXXXXXXX'
+    googleTagManager:
+      id: 'GTM-XXXXXXXXXX'
+    facebook:
+      id: 'XXXXXXXXXXXXXX'
+
+auth:
+  module: null
+  loginUrl: '/login' # Where Core redirects 401s
+  accessDeniedUrl: '/403' # Where Core redirects 403s
+  roles: # Just definitions for validation/UI
+    - name: 'admin'
+      label: 'Administrator'
+    - name: 'member'
+      label: 'Standard Member'
+
+ui:
+  theme: 'default' # Specifies the active theme directory in `src/themes/`

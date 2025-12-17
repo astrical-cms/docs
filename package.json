@@ -1,0 +1,13 @@
+{
+    "name": "astrical-starter",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "astrical dev",
+        "build": "astrical build"
+    },
+    "workspaces": [
+        "src/core",
+        "src/modules/*"
+    ]
+}
