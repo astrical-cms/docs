@@ -26,7 +26,7 @@ astrical docs plan
 ### 3. Template
 Generate reusable templates for documentation sections.
 ```bash
-astrical docs template --name <template-name>
+astrical docs template
 ```
 
 ### 4. Outline
@@ -38,7 +38,7 @@ astrical docs outline
 ### 5. Generate
 Generate the actual page content and YAML configuration.
 ```bash
-astrical docs generate --page <page-path>
+astrical docs generate 
 ```
 
 ### 6. Style
