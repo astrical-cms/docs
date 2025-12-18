@@ -1,23 +1,18 @@
-import { BaseCommand, logger } from '@nexical/cli-core';
+import { BaseCommand } from '@nexical/cli-core';
+import { Documentation } from '../../utils/documentation';
 
 export default class DocsStyleCommand extends BaseCommand {
     static usage = 'docs style';
     static description = 'Update and refine site styling.';
     static requiresProject = true;
 
-    async run() {
+    async run(options: any) {
         if (!this.projectRoot) {
             this.error('Project root not found.');
             return;
         }
 
-        this.info('Updating site styling...');
-
-        // TODO: Implement style updates
-        // 1. Analyze style.yaml or CSS
-        // 2. Propose improvements
-        // 3. Apply changes
-
-        logger.warn('Style update logic not yet implemented.');
+        const documentation = new Documentation(this, this.projectRoot);
+        await documentation.run('style.md', 'update styling');
     }
 }
