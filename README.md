@@ -47,6 +47,12 @@ Update and refine the site styling.
 astrical docs style
 ```
 
+### 7. Run
+Run the full documentation generation sequence (Analyze -> Plan -> Template -> Outline -> Generate -> Style).
+```bash
+astrical docs run
+```
+
 ## Development
 
 - **Start Dev Server**: `npm run dev`
