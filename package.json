@@ -9,5 +9,8 @@
     "workspaces": [
         "src/core",
         "src/modules/*"
-    ]
+    ],
+    "devDependencies": {
+        "@nexical/cli-core": "^0.1.8"
+    }
 }
