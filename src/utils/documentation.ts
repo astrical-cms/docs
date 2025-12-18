@@ -1,5 +1,5 @@
 import { BaseCommand, logger } from '@nexical/cli-core';
-import { Gemini } from './gemini';
+import { Gemini } from './gemini.ts';
 import fs from 'fs-extra';
 import path from 'node:path';
 

@@ -1,6 +1,6 @@
 import { BaseCommand } from '@nexical/cli-core';
-import { Documentation } from '../../utils/documentation';
-import * as constants from '../../utils/constants';
+import { Documentation } from '../../utils/documentation.ts';
+import * as constants from '../../utils/constants.ts';
 
 export default class DocsStyleCommand extends BaseCommand {
     static usage = 'docs style';
