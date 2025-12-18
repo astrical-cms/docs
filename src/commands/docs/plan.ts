@@ -1,5 +1,6 @@
 import { BaseCommand } from '@nexical/cli-core';
 import { Documentation } from '../../utils/documentation';
+import * as constants from '../../utils/constants';
 
 export default class DocsPlanCommand extends BaseCommand {
     static usage = 'docs plan';
@@ -7,12 +8,7 @@ export default class DocsPlanCommand extends BaseCommand {
     static requiresProject = true;
 
     async run(options: any) {
-        if (!this.projectRoot) {
-            this.error('Project root not found.');
-            return;
-        }
-
-        const documentation = new Documentation(this, this.projectRoot);
-        await documentation.run('plan.md', 'generate plan');
+        const documentation = new Documentation(this, this.projectRoot as string);
+        await documentation.run(constants.PLAN_PROMPT, constants.PLAN_TASK);
     }
 }

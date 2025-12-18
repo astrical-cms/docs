@@ -1,5 +1,6 @@
 import { BaseCommand } from '@nexical/cli-core';
 import { Documentation } from '../../utils/documentation';
+import * as constants from '../../utils/constants';
 
 export default class DocsTemplateCommand extends BaseCommand {
     static usage = 'docs template';
@@ -7,12 +8,7 @@ export default class DocsTemplateCommand extends BaseCommand {
     static requiresProject = true;
 
     async run(options: any) {
-        if (!this.projectRoot) {
-            this.error('Project root not found.');
-            return;
-        }
-
-        const documentation = new Documentation(this, this.projectRoot);
-        await documentation.run('template.md', 'generate templates');
+        const documentation = new Documentation(this, this.projectRoot as string);
+        await documentation.run(constants.TEMPLATE_PROMPT, constants.TEMPLATE_TASK);
     }
 }

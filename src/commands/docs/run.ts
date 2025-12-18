@@ -1,5 +1,6 @@
 import { BaseCommand } from '@nexical/cli-core';
 import { Documentation } from '../../utils/documentation';
+import * as constants from '../../utils/constants';
 
 export default class DocsRunCommand extends BaseCommand {
     static usage = 'docs run';
@@ -7,23 +8,18 @@ export default class DocsRunCommand extends BaseCommand {
     static requiresProject = true;
 
     async run(options: any) {
-        if (!this.projectRoot) {
-            this.error('Project root not found.');
-            return;
-        }
-
-        const documentation = new Documentation(this, this.projectRoot);
+        const documentation = new Documentation(this, this.projectRoot as string);
 
         this.info('Starting full documentation generation sequence...');
 
         const tasks = new Map<string, string>([
-            ['analyze-core.md', 'analyze core'],
-            ['analyze-cli.md', 'analyze cli'],
-            ['plan.md', 'plan documentation'],
-            ['template.md', 'generate templates'],
-            ['outline.md', 'generate outline'],
-            ['generate.md', 'generate content'],
-            ['style.md', 'update styling']
+            [constants.ANALYZE_CORE_PROMPT, constants.ANALYZE_CORE_TASK],
+            [constants.ANALYZE_CLI_PROMPT, constants.ANALYZE_CLI_TASK],
+            [constants.PLAN_PROMPT, constants.PLAN_TASK],
+            [constants.TEMPLATE_PROMPT, constants.TEMPLATE_TASK],
+            [constants.OUTLINE_PROMPT, constants.OUTLINE_TASK],
+            [constants.GENERATE_PROMPT, constants.GENERATE_TASK],
+            [constants.STYLE_PROMPT, constants.STYLE_TASK]
         ]);
 
         for (const [prompt, task] of tasks) {
