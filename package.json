@@ -1,6 +1,7 @@
 {
     "name": "astrical-starter",
     "version": "0.0.0",
+    "type": "module",
     "private": true,
     "scripts": {
         "dev": "astrical dev",
@@ -11,6 +12,8 @@
         "src/modules/*"
     ],
     "devDependencies": {
-        "@nexical/cli-core": "^0.1.8"
+        "@nexical/cli-core": "^0.1.8",
+        "@types/fs-extra": "^11.0.4",
+        "fs-extra": "^11.3.2"
     }
 }
