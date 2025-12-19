@@ -11,6 +11,7 @@
         "fix": "astrical run fix"
     },
     "workspaces": [
+        "src/cli",
         "src/core",
         "src/modules/*"
     ],
@@ -19,7 +20,7 @@
         "@types/nunjucks": "^3.2.6"
     },
     "dependencies": {
-        "@nexical/cli-core": "^0.1.10",
+        "@astrical/cli": "^0.5.3",
         "fs-extra": "^11.3.2",
         "nunjucks": "^3.2.4"
     }
