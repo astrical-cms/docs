@@ -12,6 +12,7 @@
     },
     "workspaces": [
         "src/core",
+        "src/cli",
         "src/modules/*"
     ],
     "devDependencies": {
