@@ -7,3 +7,6 @@
 [submodule "src/modules/agent"]
 	path = src/modules/agent
 	url = https://github.com/astrical-modules/agent.git
+[submodule "src/engine"]
+	path = src/engine
+	url = https://github.com/nexical/engine.git
