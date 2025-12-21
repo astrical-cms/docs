@@ -3,5 +3,9 @@ node_modules
 dist
 
 # Site building files
+.ai
 site
 
+# Library development files 
+src/engine
+src/modules/agent
