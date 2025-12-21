@@ -13,7 +13,8 @@
     "workspaces": [
         "src/core",
         "src/cli",
-        "src/modules/*"
+        "src/modules/*",
+        "src/engine"
     ],
     "devDependencies": {
         "@types/fs-extra": "^11.0.4",
