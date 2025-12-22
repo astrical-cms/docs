@@ -4,3 +4,6 @@
 [submodule "src/cli"]
 	path = src/cli
 	url = https://github.com/astrical-cms/cli.git
+[submodule "src/modules/docs"]
+	path = src/modules/docs
+	url = https://github.com/astrical-modules/docs.git
